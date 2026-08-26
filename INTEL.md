@@ -8,3 +8,4 @@ This is foundry intellect, not the private forge.
 - 2026-08-26T16:25Z — Hourly hunt authorized. Ticket should rise (+$2 floor per listed SKU, cap $49) via alchemy.py after credits die.
 - 2026-08-26T17:20Z — Stripe writes work if fields ride on the query string with Content-Type application/json (empty body). Form-urlencoded is blocked by the proxy; JSON body is blocked by Stripe.
 - 2026-08-26T17:20Z — Last SKU was <60m old: polished Custom Brief Desk instead of cloning. Added 40-row cited rate card, metro RPP, Fiverr/Upwork fees, salary floor, live plink.
+- 2026-08-26T20:09Z — GovCon estimators pay for GSA travel ceilings; shipped CONUS Per Diem Bid Desk $49 from official FY2026 master (297 localities / 650 seasons) + POV/IRS mileage. Not a clone of brief/scope desks. Ticket held at $49 cap.
