@@ -1,0 +1,10 @@
+# Capital ledger
+
+Append only. Split of **new_net** each cycle: 50% Reserve / 30% Reinvest / 20% Experiment.
+
+`new_net = new_gross - refunds - fees` (fees estimated at 2.9% + $0.30 / charge when Stripe fee totals are missing).
+
+Never invent sales. A zero-sales cycle still gets a row.
+
+| date | source | new_gross | refunds | fees | new_net | to_reserve | to_reinvest | to_experiment | reserve_bal | reinvest_bal | experiment_bal | notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
