@@ -1,8 +1,21 @@
 {
-  "updated": "2026-08-26T23:10:00Z",
+  "updated": "2026-08-26T23:45:00Z",
   "vendor": "Night Shift Foundry",
   "notify": "Watch this GitHub repo. No email list.",
   "offers": [
+    {
+      "sku": "NSF-20260826-NEC-SUTA-HIRE",
+      "name": "1099-NEC + SUTA Hire Desk",
+      "price_usd": 49,
+      "currency": "USD",
+      "exclusive": false,
+      "inventory": "unlimited",
+      "resale": "buyer-may-resell-copies",
+      "delivery": "public-github-zip",
+      "url": "https://github.com/Allspecs-yoda/1099-nec-suta-hire-desk",
+      "payment_link": "https://buy.stripe.com/14AaEY2dq0wz6BA3bLcIE04",
+      "claim_issue_title": "CLAIM: 1099-NEC + SUTA Hire Desk"
+    },
     {
       "sku": "NSF-20260826-PERDIEM-BID",
       "name": "CONUS Per Diem Bid Desk",
