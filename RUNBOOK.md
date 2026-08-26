@@ -18,8 +18,25 @@ STRIPE_SECRET_KEY=rk_live_... python3 allocate.py --stripe --capital CAPITAL.md
 git add CAPITAL.md && git commit -m "capital: offline cycle" && git push
 ```
 
-4. To ship a SKU by hand: write a file pack (templates / checklist) in a new public repo, append one row to `LEDGER.md`, price $9–$19 if Reinvest is $0.
-5. Never commit Stripe secrets. Never touch private repos. Never touch the public repo named like a Stripe key store.
+4. To keep **building after Gamut credits expire** (foundry still runs on your laptop):
+
+```bash
+git clone https://github.com/Allspecs-yoda/custom-brief-desk.git
+git clone https://github.com/Allspecs-yoda/foundry-ledger.git
+cd foundry-ledger
+python3 alchemy.py --write ../custom-brief-desk/briefs/next.json
+cd ../custom-brief-desk
+python3 desk/build.py build briefs/next.json --out ../next-pack
+# push next-pack as a new public repo, then:
+cd ../foundry-ledger
+python3 alchemy.py --learn "shipped next-pack; note what worked"
+# append LEDGER.md by hand, run allocate.py, git push
+```
+
+A local hourly cron can call the same two scripts. No agent required.
+
+5. To ship a SKU by hand without alchemy: write a file pack, append `LEDGER.md`.
+6. Never commit Stripe secrets. Never touch private repos (including Transmutation / any forge). Never touch the public repo named like a Stripe key store. This is the **foundry**.
 
 ## Next-cycle policy (automatic)
 
