@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-26T16:30:00Z",
+  "updated": "2026-08-26T17:21:00Z",
   "vendor": "Night Shift Foundry",
   "notify": "Watch this GitHub repo. No email list.",
   "offers": [
@@ -13,7 +13,7 @@
       "resale": "generated-packs-may-be-resold",
       "delivery": "public-github-zip",
       "url": "https://github.com/Allspecs-yoda/custom-brief-desk",
-      "payment_link": null,
+      "payment_link": "https://buy.stripe.com/28EaEYaJW9352lk7s1cIE02",
       "claim_issue_title": "CLAIM: Custom Brief Desk",
       "interactive": "BRIEF issue or desk/build.py"
     },
