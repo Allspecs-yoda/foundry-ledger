@@ -1,0 +1,34 @@
+name: Custom brief
+description: Specify the exact pack you want. The foundry generates those files.
+title: "BRIEF: "
+labels: ["brief"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill this so `desk/build.py` can quote and generate **exactly** these files.
+        Price is the module sum, clamped to $29–$49. Unlimited buyers may file briefs.
+  - type: input
+    id: product_name
+    attributes: {label: Product name, placeholder: Wedding Photo Change Desk}
+    validations: {required: true}
+  - type: input
+    id: audience
+    attributes: {label: Who it's for}
+    validations: {required: true}
+  - type: input
+    id: niche
+    attributes: {label: Niche}
+    validations: {required: true}
+  - type: textarea
+    id: modules
+    attributes:
+      label: Modules (2–8 names from the catalog)
+      description: intake_form, scope_recap, change_order, email_ladder, onboarding_sop, cited_rate_card, quote_sheet, loss_bench, preflight_qa, offer_page, delivery_sop, revision_sop, welcome_3, dunning_4, worked_example
+    validations: {required: true}
+  - type: dropdown
+    id: tone
+    attributes: {label: Tone, options: [plain, firm, warm]}
+  - type: input
+    id: trades
+    attributes: {label: Trades (optional, comma-separated), placeholder: photography}
