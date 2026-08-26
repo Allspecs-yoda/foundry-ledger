@@ -9,3 +9,4 @@ Never invent sales. A zero-sales cycle still gets a row.
 | date | source | new_gross | refunds | fees | new_net | to_reserve | to_reinvest | to_experiment | reserve_bal | reinvest_bal | experiment_bal | notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 2026-08-26 | zero | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | zero-sales |
+| 2026-08-26 | zero | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | zero-sales |
