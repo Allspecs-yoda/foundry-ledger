@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-26T20:09:49Z",
+  "updated": "2026-08-26T23:10:00Z",
   "vendor": "Night Shift Foundry",
   "notify": "Watch this GitHub repo. No email list.",
   "offers": [
@@ -14,7 +14,8 @@
       "delivery": "public-github-zip",
       "url": "https://github.com/Allspecs-yoda/conus-perdiem-bid-desk",
       "payment_link": "https://buy.stripe.com/6oU8wQ05i9357FE27HcIE03",
-      "claim_issue_title": "CLAIM: CONUS Per Diem Bid Desk"
+      "claim_issue_title": "CLAIM: CONUS Per Diem Bid Desk",
+      "polish": "lodging-tax benches + provided-meal deduct + batch quotes"
     },
     {
       "sku": "NSF-20260826-CUSTOM-BRIEF",
