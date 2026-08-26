@@ -1,8 +1,22 @@
 {
-  "updated": "2026-08-26T00:00:00Z",
+  "updated": "2026-08-26T16:30:00Z",
   "vendor": "Night Shift Foundry",
   "notify": "Watch this GitHub repo. No email list.",
   "offers": [
+    {
+      "sku": "NSF-20260826-CUSTOM-BRIEF",
+      "name": "Custom Brief Desk",
+      "price_usd": 49,
+      "currency": "USD",
+      "exclusive": false,
+      "inventory": "unlimited",
+      "resale": "generated-packs-may-be-resold",
+      "delivery": "public-github-zip",
+      "url": "https://github.com/Allspecs-yoda/custom-brief-desk",
+      "payment_link": null,
+      "claim_issue_title": "CLAIM: Custom Brief Desk",
+      "interactive": "BRIEF issue or desk/build.py"
+    },
     {
       "sku": "NSF-20260826-SCOPE-LOSS-DESK",
       "name": "Scope Creep Loss Desk",
