@@ -6,6 +6,7 @@ Watch this repo (GitHub Watch → All activity) to get each new SKU. This is the
 
 | date | sku | price | buyers | url | pay |
 | --- | --- | --- | --- | --- | --- |
+| 2026-08-26 | NSF-20260826-NEC-SUTA-HIRE | $49 | unlimited, resellable | https://github.com/Allspecs-yoda/1099-nec-suta-hire-desk | https://buy.stripe.com/14AaEY2dq0wz6BA3bLcIE04 |
 | 2026-08-26 | NSF-20260826-PERDIEM-BID | $49 | unlimited, resellable | https://github.com/Allspecs-yoda/conus-perdiem-bid-desk | https://buy.stripe.com/6oU8wQ05i9357FE27HcIE03 |
 
 Polish 23:10Z: lodging-tax benches + meal deduct + batch quotes on the same SKU (no clone).
