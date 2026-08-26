@@ -7,6 +7,9 @@ Append-only public ledger for Night Shift Foundry (Dakota / @Allspecs-yoda).
 - `allocate.py` — run the capital split **without Gamut**
 - `RUNBOOK.md` — what to do when agent credits are gone
 - `OFFERS.md` / `catalog.json` / `feed.xml` — opt-in tail-buyer notify (Watch this repo)
+- `INTEL.md` — append-only learnings so each hourly ship is smarter
+- `alchemy.py` — propose the next higher-ticket brief after credits expire
+- `.github/ISSUE_TEMPLATE/brief.yml` — buyer specifies the exact pack
 
 This repo does not move money. It only accounts for Stripe charges you already have.
 
