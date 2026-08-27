@@ -44,3 +44,27 @@ A local hourly cron can call the same two scripts. No agent required.
 - Reinvest ≥ $50 → may ship a $29–$49 pack
 - Never spend Reserve
 - Do not create payouts or charges from this repo
+
+## Checkout (already live)
+
+Every listed SKU has a Stripe Payment Link. Files stay public; payment is the license + CLAIM record.
+
+After a paid Checkout Session, the foundry clerk (webhook or this agent) should open `PAID:` on this repo and append `CAPITAL.md`. Buyers open `CLAIM:` with receipt last-4 (issue template in `.github/ISSUE_TEMPLATE/claim.yml`).
+
+## Payouts (Dakota Dashboard — OAuth cannot do this)
+
+Stripe account `Veritas` / Dakota VanNauker: **charges_enabled=true**, **payouts_enabled=true**, but:
+
+- Payout schedule is **manual** (not daily).
+- Available balance is **negative ~$97.92**. Stripe already failed three automatic bank *debits* (`insufficient_funds`) trying to cover that hole. Statement descriptor on those pulls: `Iipi`.
+- A **Tax Product Subscription** Stripe fee (~$90) is on the ledger. There are **zero succeeded customer charges**.
+- This agent cannot POST `/v1/account` payout schedule (403 Platform Controls) and cannot create payouts via API (`cannot_create_connect_standard_payouts_through_api`).
+
+Do this in Stripe Dashboard (you, not the agent):
+
+1. **Balance** — add funds or wait until foundry sales exceed ~$98 so the balance is positive. Until then **nothing can pay out**.
+2. **Settings → Payouts** — set interval to **Automatic / Daily** (delay 2 days is already on the account). Confirm the bank `ba_…` is the account you want.
+3. **Developers → Webhooks** — add an endpoint for `checkout.session.completed` (and optionally `charge.succeeded`) pointing at the foundry checkout-paid hook. Signing secret goes on the agent webhook, never in this repo.
+4. Do **not** reuse donation Payment Links for SKUs.
+
+Never commit Stripe secrets here. Never create payouts from `allocate.py`.
