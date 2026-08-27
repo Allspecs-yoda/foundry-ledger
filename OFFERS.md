@@ -6,7 +6,8 @@ Watch this repo (GitHub Watch → All activity) to get each new SKU. This is the
 
 | date | sku | price | buyers | url | pay |
 | --- | --- | --- | --- | --- | --- |
-| 2026-08-27 | NSF-20260827-OT-FLOOR | $49 | unlimited, resellable | https://github.com/Allspecs-yoda/overtime-floor-desk | CLAIM issue (no live plink this cycle) |
+| 2026-08-27 | NSF-20260827-OT-FLOOR | $49 | unlimited, resellable | https://github.com/Allspecs-yoda/overtime-floor-desk | https://buy.stripe.com/8x2aEYcS4bbde42cMlcIE06 |
+Polish 11:00Z: six-state EAP floors (WA/CA/NY/CO/AK/ME) + CA computer $58.85 + live plink on the same SKU (no clone).
 | 2026-08-27 | NSF-20260827-NEXUS-WATCH | $49 | unlimited, resellable | https://github.com/Allspecs-yoda/economic-nexus-watch-desk | https://buy.stripe.com/aFa9AUf0c1AD4tscMlcIE05 |
 Polish 08:00Z: KY HB 757 200-txn drop 2026-08-01 + SSTGB 23 full + TN associate on the same SKU (no clone).
 | 2026-08-26 | NSF-20260826-NEC-SUTA-HIRE | $49 | unlimited, resellable | https://github.com/Allspecs-yoda/1099-nec-suta-hire-desk | https://buy.stripe.com/14AaEY2dq0wz6BA3bLcIE04 |

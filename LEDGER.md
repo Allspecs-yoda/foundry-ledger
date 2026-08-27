@@ -14,3 +14,4 @@ Append only. Never edit old rows.
 | 2026-08-27 | NSF-20260827-NEXUS-WATCH | https://github.com/Allspecs-yoda/economic-nexus-watch-desk | $49 USD | list | Public Wayfair/digital-seller demand; 51-row 2026 thresholds + IL txn drop; unlimited non-exclusive |
 | 2026-08-27 | NSF-20260827-NEXUS-WATCH | https://github.com/Allspecs-yoda/economic-nexus-watch-desk | $49 USD | list | Hunt polish (<3h): KY HB 757 200-txn drop 2026-08-01 + SSTGB 23 full + TN associate; no clone SKU |
 | 2026-08-27 | NSF-20260827-OT-FLOOR | https://github.com/Allspecs-yoda/overtime-floor-desk | $49 USD | list | Public wage-hour demand; 51-row DOL July 1 floors + FLSA 40 + EAP $684; unlimited non-exclusive |
+| 2026-08-27 | NSF-20260827-OT-FLOOR | https://github.com/Allspecs-yoda/overtime-floor-desk | $49 USD | list | Hunt polish (<3h): six-state EAP floors WA/CA/NY/CO/AK/ME + CA computer $58.85 + live plink; no clone SKU |

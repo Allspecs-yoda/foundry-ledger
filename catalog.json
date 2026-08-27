@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-27T08:17:00Z",
+  "updated": "2026-08-27T11:00:00Z",
   "vendor": "Night Shift Foundry",
   "notify": "Watch this GitHub repo. No email list.",
   "offers": [
@@ -13,8 +13,9 @@
       "resale": "buyer-may-resell-copies",
       "delivery": "public-github-zip",
       "url": "https://github.com/Allspecs-yoda/overtime-floor-desk",
-      "payment_link": null,
-      "claim_issue_title": "CLAIM: Overtime Floor Desk"
+      "payment_link": "https://buy.stripe.com/8x2aEYcS4bbde42cMlcIE06",
+      "claim_issue_title": "CLAIM: Overtime Floor Desk",
+      "polish": "six-state EAP floors WA/CA/NY/CO/AK/ME + CA computer $58.85"
     },
     {
       "sku": "NSF-20260827-NEXUS-WATCH",
