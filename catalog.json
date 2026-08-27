@@ -1,8 +1,21 @@
 {
-  "updated": "2026-08-27T08:00:00Z",
+  "updated": "2026-08-27T08:17:00Z",
   "vendor": "Night Shift Foundry",
   "notify": "Watch this GitHub repo. No email list.",
   "offers": [
+    {
+      "sku": "NSF-20260827-OT-FLOOR",
+      "name": "Overtime Floor Desk",
+      "price_usd": 49,
+      "currency": "USD",
+      "exclusive": false,
+      "inventory": "unlimited",
+      "resale": "buyer-may-resell-copies",
+      "delivery": "public-github-zip",
+      "url": "https://github.com/Allspecs-yoda/overtime-floor-desk",
+      "payment_link": null,
+      "claim_issue_title": "CLAIM: Overtime Floor Desk"
+    },
     {
       "sku": "NSF-20260827-NEXUS-WATCH",
       "name": "Economic Nexus Watch Desk",
