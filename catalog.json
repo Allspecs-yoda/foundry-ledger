@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-27T17:10:00Z",
+  "updated": "2026-08-27T20:00:00Z",
   "vendor": "Night Shift Foundry",
   "notify": "Watch this GitHub repo. No email list.",
   "offers": [
@@ -14,7 +14,8 @@
       "delivery": "public-github-zip",
       "url": "https://github.com/Allspecs-yoda/hcv-payment-standard-desk",
       "payment_link": "https://buy.stripe.com/00w4gAdW86UXaRQdQpcIE07",
-      "claim_issue_title": "CLAIM: HCV Payment Standard Desk"
+      "claim_issue_title": "CLAIM: HCV Payment Standard Desk",
+      "polish": "24 CFR 982.505 HAP; (c)(1) voucher vs unit size; (c)(3) two-year in-place hold"
     },
     {
       "sku": "NSF-20260827-OT-FLOOR",
