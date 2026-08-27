@@ -11,6 +11,13 @@ body:
     validations:
       required: true
   - type: input
+    id: user_id
+    attributes:
+      label: User ID (same GitHub handle entered at checkout)
+      placeholder: Allspecs-yoda
+    validations:
+      required: true
+  - type: input
     id: last4
     attributes:
       label: Receipt last 4
