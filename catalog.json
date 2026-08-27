@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-27T23:15:00Z",
+  "updated": "2026-08-27T23:40:00Z",
   "vendor": "Night Shift Foundry",
   "notify": "Watch this GitHub repo. No email list.",
   "offers": [
@@ -110,7 +110,7 @@
       "resale": "buyer-may-resell-copies",
       "delivery": "public-github-zip",
       "url": "https://github.com/Allspecs-yoda/scope-creep-loss-desk",
-      "payment_link": null,
+      "payment_link": "https://buy.stripe.com/fZu3cw8BOdjlgcaeUtcIE09",
       "claim_issue_title": "CLAIM: Scope Creep Loss Desk"
     }
   ]
