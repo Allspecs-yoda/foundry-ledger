@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#0f1419"/>
+  <rect x="16" y="16" width="928" height="508" rx="12" fill="#1a222c" stroke="#2a3542"/>
+  <text x="36" y="52" fill="#e6b84d" font-size="22" font-family="system-ui,sans-serif" font-weight="700">Economic Nexus Watch Desk</text>
+  <text x="36" y="74" fill="#9aa8b5" font-size="12" font-family="ui-monospace,monospace">NSF-20260827-NEXUS-WATCH · sample run</text>
+  <text x="28" y="86" fill="#9aa8b5" font-size="13" font-family="ui-monospace,monospace">KY  ·  2026-08-01</text><text x="300" y="86" fill="#e8eef4" font-size="13" font-family="ui-monospace,monospace">200-txn test dropped (HB 757)</text><text x="28" y="108" fill="#9aa8b5" font-size="13" font-family="ui-monospace,monospace">IL</text><text x="300" y="108" fill="#e8eef4" font-size="13" font-family="ui-monospace,monospace">transaction-count drop watch</text><text x="28" y="130" fill="#9aa8b5" font-size="13" font-family="ui-monospace,monospace">SSTGB</text><text x="300" y="130" fill="#e8eef4" font-size="13" font-family="ui-monospace,monospace">full-member vs associate</text><text x="28" y="152" fill="#9aa8b5" font-size="13" font-family="ui-monospace,monospace">Preview rows</text><text x="300" y="152" fill="#e8eef4" font-size="13" font-family="ui-monospace,monospace">6 states</text><text x="28" y="174" fill="#9aa8b5" font-size="13" font-family="ui-monospace,monospace">Paid pack</text><text x="300" y="174" fill="#e8eef4" font-size="13" font-family="ui-monospace,monospace">51-row Wayfair table + SSTGB 23</text>
+  <g transform="rotate(-18 480 270)" opacity="0.22">
+    <text x="120" y="300" fill="#e6b84d" font-size="36" font-family="system-ui,sans-serif" font-weight="800">PREVIEW · NOT THE PACK · PAY TO UNLOCK</text>
+  </g>
+  <text x="36" y="500" fill="#6b7784" font-size="11" font-family="system-ui,sans-serif">Night Shift Foundry · screenshot this and you still do not have the files</text>
+</svg>
