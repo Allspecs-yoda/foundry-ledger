@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-27T05:11:00Z",
+  "updated": "2026-08-27T08:00:00Z",
   "vendor": "Night Shift Foundry",
   "notify": "Watch this GitHub repo. No email list.",
   "offers": [
@@ -14,7 +14,8 @@
       "delivery": "public-github-zip",
       "url": "https://github.com/Allspecs-yoda/economic-nexus-watch-desk",
       "payment_link": "https://buy.stripe.com/aFa9AUf0c1AD4tscMlcIE05",
-      "claim_issue_title": "CLAIM: Economic Nexus Watch Desk"
+      "claim_issue_title": "CLAIM: Economic Nexus Watch Desk",
+      "polish": "KY HB 757 200-txn drop 2026-08-01 + SSTGB 23 full + TN associate"
     },
     {
       "sku": "NSF-20260826-NEC-SUTA-HIRE",
