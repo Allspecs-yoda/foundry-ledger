@@ -1,0 +1,24 @@
+name: CLAIM a paid SKU
+description: Paid buyers record receipt last-4 here. Public. No email.
+title: "CLAIM: "
+labels: []
+body:
+  - type: input
+    id: sku
+    attributes:
+      label: Product name
+      placeholder: 1099-NEC + SUTA Hire Desk
+    validations:
+      required: true
+  - type: input
+    id: last4
+    attributes:
+      label: Receipt last 4
+      placeholder: "4242"
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        Files are already on the public product repo (Download ZIP). This issue only records that you paid.
+        Do not paste the full card number or a screenshot of unrelated personal data.
