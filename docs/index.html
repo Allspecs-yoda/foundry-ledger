@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Night Shift Foundry — shop</title>
+  <style>
+    :root { --bg:#0f1419; --card:#1a222c; --ink:#e8eef4; --muted:#9aa8b5; --accent:#e6b84d; --line:#2a3542; }
+    * { box-sizing: border-box; }
+    body { margin:0; font:16px/1.45 system-ui, sans-serif; background:var(--bg); color:var(--ink); }
+    header, footer, main { max-width: 980px; margin:0 auto; padding: 24px 20px; }
+    header h1 { margin:0 0 6px; font-size: 1.6rem; }
+    header p { margin:0; color:var(--muted); }
+    .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap:16px; }
+    article { background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden; display:flex; flex-direction:column; }
+    article svg, article img { width:100%; height:auto; display:block; background:#0b0f14; }
+    article h2 { font-size:1.05rem; margin:12px 16px 4px; }
+    article p { margin:0 16px 12px; color:var(--muted); font-size:.92rem; }
+    .row { display:flex; gap:8px; padding:0 16px 16px; align-items:center; }
+    a.buy { background:var(--accent); color:#1a1406; font-weight:700; text-decoration:none; padding:8px 12px; border-radius:8px; }
+    a.preview { color:var(--accent); }
+    .price { margin-left:auto; font-weight:700; }
+    footer { border-top:1px solid var(--line); color:var(--muted); font-size:.85rem; }
+    footer a { color:var(--accent); }
+    .note { font-size:.85rem; color:var(--muted); margin: 8px 0 20px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Night Shift Foundry</h1>
+    <p>File-only desks for people who already do the work. Preview here. Full pack after Stripe checkout.</p>
+    <p class="note">Public pages are sample + watermarked screen only — not the build. Pay with card + billing details + TOS. Enter your GitHub handle; the clerk invites that handle to the private pack. Custom work: open a <a href="https://github.com/Allspecs-yoda/foundry-ledger/issues/new?template=brief.yml">BRIEF issue</a>, pay, get that spec.</p>
+  </header>
+  <main class="grid" id="grid">
+    <!-- cards injected as static HTML so the shop works without JS -->
+    <article>
+      <img src="../previews/lihtc-mtsp.svg" alt="Watermarked preview of LIHTC MTSP Rent Desk">
+      <h2>LIHTC MTSP Rent Desk</h2>
+      <p>FY2026 HUD MTSP → 50/60% max rents. Preview is 8 counties; full pack is 4,764 rows.</p>
+      <div class="row">
+        <a class="buy" href="https://buy.stripe.com/5kQcN65pC7Z1aRQ9A9cIE08">Buy $49</a>
+        <a class="preview" href="https://github.com/Allspecs-yoda/lihtc-mtsp-rent-desk">Sample</a>
+        <span class="price">$49</span>
+      </div>
+    </article>
+    <article>
+      <img src="../previews/hcv-ps.svg" alt="Watermarked preview of HCV Payment Standard Desk">
+      <h2>HCV Payment Standard Desk</h2>
+      <p>FY2026 FMR + SAFMR HAP. Preview is a handful of ZIPs; full pack is the county + ZIP benches.</p>
+      <div class="row">
+        <a class="buy" href="https://buy.stripe.com/00w4gAdW86UXaRQdQpcIE07">Buy $49</a>
+        <a class="preview" href="https://github.com/Allspecs-yoda/hcv-payment-standard-desk">Sample</a>
+        <span class="price">$49</span>
+      </div>
+    </article>
+    <article>
+      <img src="../previews/ot-floor.svg" alt="Watermarked preview of Overtime Floor Desk">
+      <h2>Overtime Floor Desk</h2>
+      <p>2026 DOL floors + tip-credit OT cash. Preview runs 3 states; full pack is 51 + NY hospitality.</p>
+      <div class="row">
+        <a class="buy" href="https://buy.stripe.com/8x2aEYcS4bbde42cMlcIE06">Buy $49</a>
+        <a class="preview" href="https://github.com/Allspecs-yoda/overtime-floor-desk">Sample</a>
+        <span class="price">$49</span>
+      </div>
+    </article>
+    <article>
+      <img src="../previews/nexus.svg" alt="Watermarked preview of Economic Nexus Watch Desk">
+      <h2>Economic Nexus Watch Desk</h2>
+      <p>Wayfair thresholds + KY 200-txn drop. Preview is 6 states; full pack is 51 + SSTGB.</p>
+      <div class="row">
+        <a class="buy" href="https://buy.stripe.com/aFa9AUf0c1AD4tscMlcIE05">Buy $49</a>
+        <a class="preview" href="https://github.com/Allspecs-yoda/economic-nexus-watch-desk">Sample</a>
+        <span class="price">$49</span>
+      </div>
+    </article>
+    <article>
+      <img src="../previews/nec-suta.svg" alt="Watermarked preview of 1099-NEC + SUTA Hire Desk">
+      <h2>1099-NEC + SUTA Hire Desk</h2>
+      <p>W-2 vs 1099 at the $2,000 NEC line. Preview is TX/WA/IA; full pack is 57 SUTA bases.</p>
+      <div class="row">
+        <a class="buy" href="https://buy.stripe.com/14AaEY2dq0wz6BA3bLcIE04">Buy $49</a>
+        <a class="preview" href="https://github.com/Allspecs-yoda/1099-nec-suta-hire-desk">Sample</a>
+        <span class="price">$49</span>
+      </div>
+    </article>
+    <article>
+      <img src="../previews/perdiem.svg" alt="Watermarked preview of CONUS Per Diem Bid Desk">
+      <h2>CONUS Per Diem Bid Desk</h2>
+      <p>GSA FY2026 per diem quotes. Preview is 4 localities; full pack is the master file.</p>
+      <div class="row">
+        <a class="buy" href="https://buy.stripe.com/6oU8wQ05i9357FE27HcIE03">Buy $49</a>
+        <a class="preview" href="https://github.com/Allspecs-yoda/conus-perdiem-bid-desk">Sample</a>
+        <span class="price">$49</span>
+      </div>
+    </article>
+    <article>
+      <img src="../previews/brief.svg" alt="Watermarked preview of Custom Brief Desk">
+      <h2>Custom Brief Desk</h2>
+      <p>You specify the pack. We generate those files after payment — not a public dump of the generator.</p>
+      <div class="row">
+        <a class="buy" href="https://buy.stripe.com/28EaEYaJW9352lk7s1cIE02">Buy $49</a>
+        <a class="preview" href="https://github.com/Allspecs-yoda/foundry-ledger/issues/new?template=brief.yml">File a BRIEF</a>
+        <span class="price">$49</span>
+      </div>
+    </article>
+    <article>
+      <img src="../previews/scope.svg" alt="Watermarked preview of Scope Creep Loss Desk">
+      <h2>Scope Creep Loss Desk</h2>
+      <p>Change-order loss bench. Preview is 4 archetypes; full pack is the industry CSV + calculator.</p>
+      <div class="row">
+        <a class="buy" href="https://buy.stripe.com/fZu3cw8BOdjlgcaeUtcIE09">Buy $49</a>
+        <a class="preview" href="https://github.com/Allspecs-yoda/scope-creep-loss-desk">Sample</a>
+        <span class="price">$49</span>
+      </div>
+    </article>
+  </main>
+  <footer>
+    <p>
+      <a href="https://github.com/Allspecs-yoda/foundry-ledger/blob/main/TERMS.md">Terms of Service</a>
+      ·
+      <a href="https://github.com/Allspecs-yoda/foundry-ledger/blob/main/PRIVACY.md">Privacy Policy</a>
+      ·
+      <a href="https://github.com/Allspecs-yoda/foundry-ledger">Ledger</a>
+      ·
+      Watch this repo for new SKUs (no email list).
+    </p>
+    <p>Checkout collects payment details, billing address, phone, and your GitHub handle, and requires TOS acceptance. Not tax, legal, or payroll advice. Seller: Dakota / Night Shift Foundry.</p>
+  </footer>
+</body>
+</html>
