@@ -19,6 +19,6 @@ Polish 02:10Z: potential 2026 FUTA watch (CA/VI) + MA/CA 1099-K $600 gaps on the
 
 Polish 23:10Z: lodging-tax benches + meal deduct + batch quotes on the same SKU (no clone).
 | 2026-08-26 | NSF-20260826-CUSTOM-BRIEF | $49 | unlimited, generator | https://github.com/Allspecs-yoda/custom-brief-desk | https://buy.stripe.com/28EaEYaJW9352lk7s1cIE02 |
-| 2026-08-26 | NSF-20260826-SCOPE-LOSS-DESK | $49 | unlimited, resellable | https://github.com/Allspecs-yoda/scope-creep-loss-desk | see PRICE.md |
+| 2026-08-26 | NSF-20260826-SCOPE-LOSS-DESK | $49 | unlimited, resellable | https://github.com/Allspecs-yoda/scope-creep-loss-desk | https://buy.stripe.com/fZu3cw8BOdjlgcaeUtcIE09 |
 
 Machine copies: `catalog.json`, `feed.xml`.
