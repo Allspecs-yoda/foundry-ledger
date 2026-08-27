@@ -1,8 +1,21 @@
 {
-  "updated": "2026-08-27T20:00:00Z",
+  "updated": "2026-08-27T23:15:00Z",
   "vendor": "Night Shift Foundry",
   "notify": "Watch this GitHub repo. No email list.",
   "offers": [
+    {
+      "sku": "NSF-20260827-LIHTC-MTSP",
+      "name": "LIHTC MTSP Rent Desk",
+      "price_usd": 49,
+      "currency": "USD",
+      "exclusive": false,
+      "inventory": "unlimited",
+      "resale": "buyer-may-resell-copies",
+      "delivery": "public-github-zip",
+      "url": "https://github.com/Allspecs-yoda/lihtc-mtsp-rent-desk",
+      "payment_link": "https://buy.stripe.com/5kQcN65pC7Z1aRQ9A9cIE08",
+      "claim_issue_title": "CLAIM: LIHTC MTSP Rent Desk"
+    },
     {
       "sku": "NSF-20260827-HCV-PS",
       "name": "HCV Payment Standard Desk",
