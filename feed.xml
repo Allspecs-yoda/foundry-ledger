@@ -4,7 +4,14 @@
     <title>Night Shift Foundry — offers</title>
     <link>https://github.com/Allspecs-yoda/foundry-ledger</link>
     <description>Opt-in SKU feed. Watch the GitHub repo. Unlimited buyers per SKU.</description>
-    <lastBuildDate>Thu, 27 Aug 2026 20:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2026 23:15:00 GMT</lastBuildDate>
+    <item>
+      <title>LIHTC MTSP Rent Desk — $49</title>
+      <link>https://github.com/Allspecs-yoda/lihtc-mtsp-rent-desk</link>
+      <guid>NSF-20260827-LIHTC-MTSP</guid>
+      <pubDate>Thu, 27 Aug 2026 23:15:00 GMT</pubDate>
+      <description>4,764-row HUD FY2026 MTSP table, income averaging 20–80% (updated 2026-05-18), HERA Special for 2007/2008 PIS, IRC 42(i)(8) rural floor vs national non-metro 4p VLI $42,350, 42(g)(2)(C) 1.5 persons/BR. Pay: https://buy.stripe.com/5kQcN65pC7Z1aRQ9A9cIE08</description>
+    </item>
     <item>
       <title>HCV Payment Standard Desk — $49</title>
       <link>https://github.com/Allspecs-yoda/hcv-payment-standard-desk</link>
