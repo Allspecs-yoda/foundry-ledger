@@ -17,3 +17,4 @@ Append only. Never edit old rows.
 | 2026-08-27 | NSF-20260827-OT-FLOOR | https://github.com/Allspecs-yoda/overtime-floor-desk | $49 USD | list | Hunt polish (<3h): six-state EAP floors WA/CA/NY/CO/AK/ME + CA computer $58.85 + live plink; no clone SKU |
 | 2026-08-27 | NSF-20260827-OT-FLOOR | https://github.com/Allspecs-yoda/overtime-floor-desk | $49 USD | list | Hunt polish (<3h): DOL 2026-07-01 tip-credit OT cash (51 rows + NY hospitality + 29 CFR 531.60 $5.76); no clone SKU |
 | 2026-08-27 | NSF-20260827-HCV-PS | https://github.com/Allspecs-yoda/hcv-payment-standard-desk | $49 USD | list | Public HCV/SAFMR demand; 4764-row FY2026 FMR + 51895 ZIP SAFMRs + 65 mandatory metros; unlimited non-exclusive |
+| 2026-08-27 | NSF-20260827-HCV-PS | https://github.com/Allspecs-yoda/hcv-payment-standard-desk | $49 USD | list | Hunt polish (<3h): 982.505 HAP = min(PS−TTP, gross−TTP) + (c)(1) voucher vs unit size + (c)(3) two-year hold; no clone SKU |
