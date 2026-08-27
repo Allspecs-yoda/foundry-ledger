@@ -68,3 +68,14 @@ Do this in Stripe Dashboard (you, not the agent):
 4. Do **not** reuse donation Payment Links for SKUs.
 
 Never commit Stripe secrets here. Never create payouts from `allocate.py`.
+
+## Buyer account at checkout (release gate)
+
+Checkout is the account-create step. Every foundry Payment Link now:
+
+- creates a Stripe Customer (`customer_creation=always`)
+- requires **email** (Stripe Checkout)
+- requires **phone**
+- requires custom field **User ID (GitHub handle)**
+
+The pack is treated as released to that customer only after those three exist on the paid session. Buyers still CLAIM with last-4 **and** that user ID. The agent does not log into Stripe Dashboard or complete bank payouts.
