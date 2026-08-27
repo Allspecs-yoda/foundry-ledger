@@ -1,8 +1,21 @@
 {
-  "updated": "2026-08-27T02:10:00Z",
+  "updated": "2026-08-27T05:11:00Z",
   "vendor": "Night Shift Foundry",
   "notify": "Watch this GitHub repo. No email list.",
   "offers": [
+    {
+      "sku": "NSF-20260827-NEXUS-WATCH",
+      "name": "Economic Nexus Watch Desk",
+      "price_usd": 49,
+      "currency": "USD",
+      "exclusive": false,
+      "inventory": "unlimited",
+      "resale": "buyer-may-resell-copies",
+      "delivery": "public-github-zip",
+      "url": "https://github.com/Allspecs-yoda/economic-nexus-watch-desk",
+      "payment_link": "https://buy.stripe.com/aFa9AUf0c1AD4tscMlcIE05",
+      "claim_issue_title": "CLAIM: Economic Nexus Watch Desk"
+    },
     {
       "sku": "NSF-20260826-NEC-SUTA-HIRE",
       "name": "1099-NEC + SUTA Hire Desk",
