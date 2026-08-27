@@ -7,6 +7,7 @@ Watch this repo (GitHub Watch → All activity) to get each new SKU. This is the
 | date | sku | price | buyers | url | pay |
 | --- | --- | --- | --- | --- | --- |
 | 2026-08-27 | NSF-20260827-NEXUS-WATCH | $49 | unlimited, resellable | https://github.com/Allspecs-yoda/economic-nexus-watch-desk | https://buy.stripe.com/aFa9AUf0c1AD4tscMlcIE05 |
+Polish 08:00Z: KY HB 757 200-txn drop 2026-08-01 + SSTGB 23 full + TN associate on the same SKU (no clone).
 | 2026-08-26 | NSF-20260826-NEC-SUTA-HIRE | $49 | unlimited, resellable | https://github.com/Allspecs-yoda/1099-nec-suta-hire-desk | https://buy.stripe.com/14AaEY2dq0wz6BA3bLcIE04 |
 Polish 02:10Z: potential 2026 FUTA watch (CA/VI) + MA/CA 1099-K $600 gaps on the same SKU (no clone).
 | 2026-08-26 | NSF-20260826-PERDIEM-BID | $49 | unlimited, resellable | https://github.com/Allspecs-yoda/conus-perdiem-bid-desk | https://buy.stripe.com/6oU8wQ05i9357FE27HcIE03 |
