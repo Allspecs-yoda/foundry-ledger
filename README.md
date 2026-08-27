@@ -26,3 +26,16 @@ STRIPE_SECRET_KEY=sk_live_... python3 allocate.py --stripe --capital CAPITAL.md
 ## Credit outage
 
 If Night Shift Foundry cannot start: keep selling via existing Payment Links, run `allocate.py` locally, and follow `RUNBOOK.md` to publish a file-only pack by hand.
+
+## Shop (preview only)
+
+Watermarked screens of what each desk does — not the files:
+
+- Storefront: [docs/index.html](docs/index.html)
+- [Terms of Service](TERMS.md) · [Privacy Policy](PRIVACY.md)
+
+Pay on Stripe (card + billing address + TOS). Enter your GitHub handle. After a real charge, the clerk invites that handle to the **private** pack. Public product repos stay as Dakota left them.
+
+Custom request: open a [BRIEF issue](https://github.com/Allspecs-yoda/foundry-ledger/issues/new?template=brief.yml), pay Custom Brief Desk, get that spec.
+
+Do not email. Watch this repo.
