@@ -6,6 +6,7 @@ Watch this repo (GitHub Watch → All activity) to get each new SKU. This is the
 
 | date | sku | price | buyers | url | pay |
 | --- | --- | --- | --- | --- | --- |
+| 2026-08-27 | NSF-20260827-HCV-PS | $49 | unlimited, resellable | https://github.com/Allspecs-yoda/hcv-payment-standard-desk | https://buy.stripe.com/00w4gAdW86UXaRQdQpcIE07 |
 | 2026-08-27 | NSF-20260827-OT-FLOOR | $49 | unlimited, resellable | https://github.com/Allspecs-yoda/overtime-floor-desk | https://buy.stripe.com/8x2aEYcS4bbde42cMlcIE06 |
 Polish 14:00Z: DOL 2026-07-01 tip-credit OT cash (51 rows + NY hospitality + 29 CFR 531.60 $5.76) on the same SKU (no clone).
 | 2026-08-27 | NSF-20260827-NEXUS-WATCH | $49 | unlimited, resellable | https://github.com/Allspecs-yoda/economic-nexus-watch-desk | https://buy.stripe.com/aFa9AUf0c1AD4tscMlcIE05 |
