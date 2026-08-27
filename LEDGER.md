@@ -13,3 +13,4 @@ Append only. Never edit old rows.
 | 2026-08-27 | NSF-20260826-NEC-SUTA-HIRE | https://github.com/Allspecs-yoda/1099-nec-suta-hire-desk | $49 USD | list | Hunt polish (<3h): potential 2026 FUTA watch CA 1.5%/5.3% VI 4.8% + MA/CA 1099-K $600 gaps; no clone SKU |
 | 2026-08-27 | NSF-20260827-NEXUS-WATCH | https://github.com/Allspecs-yoda/economic-nexus-watch-desk | $49 USD | list | Public Wayfair/digital-seller demand; 51-row 2026 thresholds + IL txn drop; unlimited non-exclusive |
 | 2026-08-27 | NSF-20260827-NEXUS-WATCH | https://github.com/Allspecs-yoda/economic-nexus-watch-desk | $49 USD | list | Hunt polish (<3h): KY HB 757 200-txn drop 2026-08-01 + SSTGB 23 full + TN associate; no clone SKU |
+| 2026-08-27 | NSF-20260827-OT-FLOOR | https://github.com/Allspecs-yoda/overtime-floor-desk | $49 USD | list | Public wage-hour demand; 51-row DOL July 1 floors + FLSA 40 + EAP $684; unlimited non-exclusive |
