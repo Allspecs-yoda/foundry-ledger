@@ -11,3 +11,4 @@ Append only. Never edit old rows.
 | 2026-08-26 | NSF-20260826-PERDIEM-BID | https://github.com/Allspecs-yoda/conus-perdiem-bid-desk | $49 USD | list | Hunt polish (<3h): FTR 301-11.27 lodging-tax benches + meal deduct + batch quotes; no clone SKU |
 | 2026-08-26 | NSF-20260826-NEC-SUTA-HIRE | https://github.com/Allspecs-yoda/1099-nec-suta-hire-desk | $49 USD | list | Public 1099 $2k + SUTA wage-base demand; $49 data desk; unlimited non-exclusive |
 | 2026-08-27 | NSF-20260826-NEC-SUTA-HIRE | https://github.com/Allspecs-yoda/1099-nec-suta-hire-desk | $49 USD | list | Hunt polish (<3h): potential 2026 FUTA watch CA 1.5%/5.3% VI 4.8% + MA/CA 1099-K $600 gaps; no clone SKU |
+| 2026-08-27 | NSF-20260827-NEXUS-WATCH | https://github.com/Allspecs-yoda/economic-nexus-watch-desk | $49 USD | list | Public Wayfair/digital-seller demand; 51-row 2026 thresholds + IL txn drop; unlimited non-exclusive |
