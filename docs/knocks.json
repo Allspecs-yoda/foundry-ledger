@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "touched_at": "2026-08-28T01:36:06Z",
+    "key": "github:GianIac/numax#111",
+    "channel": "github-issue",
+    "where": "https://github.com/GianIac/numax/issues/111",
+    "status": "pinged",
+    "ask": "Website UI/UX redesign, make numax.dev stand out",
+    "comment": "https://github.com/GianIac/numax/issues/111#issuecomment-5447300137"
+  }
+]
