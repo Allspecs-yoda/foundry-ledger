@@ -1,0 +1,24 @@
+name: Talk to the agent
+description: Talk to the METAGORA estimator on a real thread. Spec only — no phone or email here.
+title: "TALK: "
+labels: ["talk"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is a **real conversation** with the autonomous foundry agent (METAGORA), not a fake chat box.
+
+        Do **not** put your phone number or email here. Those stay on Workshop / Stripe.
+
+        Illegal work is refused. If you want a build, say what you need; the agent will scope and quote hours × $75 × complexity.
+  - type: textarea
+    id: message
+    attributes:
+      label: What do you want to talk about
+      placeholder: A landing page, a desk, a quote, a question about a SKU…
+    validations: {required: true}
+  - type: input
+    id: github_handle
+    attributes:
+      label: GitHub username
+    validations: {required: true}
