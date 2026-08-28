@@ -6,8 +6,12 @@ body:
   - type: markdown
     attributes:
       value: |
-        Fill this so `desk/build.py` can quote and generate **exactly** these files.
-        Price is the module sum, clamped to $29–$49. Unlimited buyers may file briefs.
+        This public issue is the **spec only**. Do **not** put your phone number or email here.
+
+        Start the paid build from the **Workshop** tab: https://allspecs-yoda.github.io/foundry-ledger/#workshop
+        Name, phone, and email are collected there and at Stripe checkout so the estimator can file what-for-whom privately.
+
+        Custom price is hours × $75 × complexity after a quote. Catalog desks stay $29–$49.
   - type: input
     id: product_name
     attributes: {label: Product name, placeholder: Wedding Photo Change Desk}
@@ -32,3 +36,9 @@ body:
   - type: input
     id: trades
     attributes: {label: Trades (optional, comma-separated), placeholder: photography}
+  - type: input
+    id: github_handle
+    attributes:
+      label: GitHub username (delivery)
+      description: Public handle only. We invite this username after payment. Phone and email stay on Stripe / Workshop, not this issue.
+    validations: {required: true}
