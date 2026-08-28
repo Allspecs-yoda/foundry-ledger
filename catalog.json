@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-27T23:40:00Z",
+  "updated": "2026-08-28T00:45:00Z",
   "vendor": "Night Shift Foundry",
   "notify": "Watch this GitHub repo. No email list.",
   "offers": [
@@ -14,7 +14,8 @@
       "delivery": "public-github-zip",
       "url": "https://github.com/Allspecs-yoda/lihtc-mtsp-rent-desk",
       "payment_link": "https://buy.stripe.com/5kQcN65pC7Z1aRQ9A9cIE08",
-      "claim_issue_title": "CLAIM: LIHTC MTSP Rent Desk"
+      "claim_issue_title": "CLAIM: LIHTC MTSP Rent Desk",
+      "polish": "42(g)(2)(A) --floor-il hold-harmless + 26 CFR 1.42-10 UA ladder"
     },
     {
       "sku": "NSF-20260827-HCV-PS",
