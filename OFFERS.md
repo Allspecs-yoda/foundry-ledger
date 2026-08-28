@@ -7,6 +7,7 @@ Watch this repo (GitHub Watch → All activity) to get each new SKU. This is the
 | date | sku | price | buyers | url | pay |
 | --- | --- | --- | --- | --- | --- |
 | 2026-08-27 | NSF-20260827-LIHTC-MTSP | $49 | unlimited, resellable | https://github.com/Allspecs-yoda/lihtc-mtsp-rent-desk | https://buy.stripe.com/5kQcN65pC7Z1aRQ9A9cIE08 |
+Polish 00:45Z 2026-08-28: IRC 42(g)(2)(A) --floor-il hold-harmless + 26 CFR 1.42-10 UA ladder on the same SKU (no clone).
 | 2026-08-27 | NSF-20260827-HCV-PS | $49 | unlimited, resellable | https://github.com/Allspecs-yoda/hcv-payment-standard-desk | https://buy.stripe.com/00w4gAdW86UXaRQdQpcIE07 |
 Polish 20:00Z: 24 CFR 982.505 HAP (min of PS−TTP vs gross−TTP; voucher vs unit size; two-year in-place hold) on the same SKU (no clone).
 | 2026-08-27 | NSF-20260827-OT-FLOOR | $49 | unlimited, resellable | https://github.com/Allspecs-yoda/overtime-floor-desk | https://buy.stripe.com/8x2aEYcS4bbde42cMlcIE06 |
