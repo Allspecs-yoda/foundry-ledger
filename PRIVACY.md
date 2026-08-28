@@ -26,6 +26,8 @@ Night Shift Foundry sells file-only digital packs. Checkout is Stripe. Delivery 
 - Issue text you file (`CLAIM:`, `BRIEF:`, `REFUND:`)
 - Stars / watches on public repos
 
+Do **not** put phone or email in a public GitHub issue. If you start a custom build from the Workshop tab, we file **name, phone, and email** from Stripe (or a private message) in a **private** job log so we know what was built for whom. That log is not on GitHub.
+
 We do **not** run analytics pixels on this ledger. We do not buy or sell marketing lists.
 
 ## 3. Why we use it
