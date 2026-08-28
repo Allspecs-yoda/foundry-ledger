@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>METAGORA</title>
+  <style>
+    :root {
+      --bg: #07090c;
+      --ink: #f4f1ea;
+      --mute: #8b93a0;
+      --line: rgba(244,241,234,.14);
+      --gold: #d9c4a0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font: 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      overflow: hidden;
+      letter-spacing: .02em;
+    }
+    .field {
+      position: fixed; inset: 0;
+      background:
+        radial-gradient(900px 500px at 20% 10%, rgba(217,196,160,.08), transparent 55%),
+        radial-gradient(700px 480px at 80% 90%, rgba(90,120,160,.07), transparent 50%),
+        var(--bg);
+      animation: drift 28s ease-in-out infinite alternate;
+    }
+    .field::before {
+      content: "";
+      position: absolute; inset: -20%;
+      background:
+        repeating-linear-gradient(
+          115deg,
+          transparent 0 46px,
+          rgba(244,241,234,.018) 46px 47px
+        );
+      animation: pan 40s linear infinite;
+      pointer-events: none;
+    }
+    .orb {
+      position: absolute;
+      width: 42vmin; height: 42vmin;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      left: 50%; top: 50%;
+      translate: -50% -50%;
+      animation: spin 64s linear infinite;
+    }
+    .orb::after {
+      content: "";
+      position: absolute;
+      width: 6px; height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      top: -3px; left: 50%;
+      box-shadow: 0 0 18px var(--gold);
+    }
+    .card {
+      position: relative;
+      z-index: 2;
+      min-height: 100%;
+      display: grid;
+      place-items: center;
+      padding: 32px 24px;
+    }
+    .inner {
+      width: min(420px, 92vw);
+      text-align: center;
+    }
+    .mark {
+      font-size: 11px;
+      letter-spacing: .42em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 28px;
+      animation: fade 1.4s ease both;
+    }
+    h1 {
+      font-weight: 500;
+      font-size: clamp(2.2rem, 6vw, 3.1rem);
+      letter-spacing: .28em;
+      margin-bottom: 40px;
+      animation: fade 1.6s ease .1s both;
+    }
+    ul {
+      list-style: none;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      animation: fade 1.8s ease .2s both;
+    }
+    li {
+      display: grid;
+      grid-template-columns: 88px 1fr;
+      gap: 16px;
+      align-items: baseline;
+      padding: 16px 4px;
+      text-align: left;
+    }
+    li + li { border-top: 1px solid var(--line); }
+    .k {
+      color: var(--mute);
+      font-size: 11px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+    a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color .3s ease, color .3s ease;
+    }
+    a:hover { color: var(--gold); border-bottom-color: var(--gold); }
+    @keyframes drift {
+      from { filter: hue-rotate(0deg); }
+      to { filter: hue-rotate(18deg); }
+    }
+    @keyframes pan { to { transform: translate3d(-8%, 4%, 0); } }
+    @keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .field, .field::before, .orb, .mark, h1, ul { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="field" aria-hidden="true"><div class="orb"></div></div>
+  <main class="card">
+    <div class="inner">
+      <p class="mark">calling card</p>
+      <h1>METAGORA</h1>
+      <ul>
+        <li>
+          <span class="k">Site</span>
+          <a href="https://allspecs-yoda.github.io/foundry-ledger/">allspecs-yoda.github.io/foundry-ledger</a>
+        </li>
+        <li>
+          <span class="k">Build</span>
+          <a href="https://github.com/Allspecs-yoda/foundry-ledger/issues/new?template=brief.yml">start a brief</a>
+        </li>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>
