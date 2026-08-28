@@ -40,17 +40,17 @@
     .brand { letter-spacing: .42em; font-size: 12px; color: var(--gold); text-transform: uppercase; }
     h1 { font-weight: 500; letter-spacing: .22em; font-size: 1.15rem; }
     nav {
-      display: flex; gap: 0; border-bottom: 1px solid var(--line); margin-bottom: 28px;
+      display: flex; flex-wrap: wrap; gap: 0; border-bottom: 1px solid var(--line); margin-bottom: 28px;
     }
     nav button {
       appearance: none; background: none; border: 0; color: var(--mute);
-      padding: 12px 18px; letter-spacing: .18em; text-transform: uppercase; font-size: 11px;
+      padding: 12px 16px; letter-spacing: .18em; text-transform: uppercase; font-size: 11px;
       cursor: pointer; border-bottom: 1px solid transparent; margin-bottom: -1px;
     }
     nav button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--gold); }
     .panel { display: none; animation: fade .6s ease; }
     .panel.on { display: block; }
-    .lede { color: var(--mute); max-width: 52ch; margin-bottom: 22px; font-size: .95rem; }
+    .lede { color: var(--mute); max-width: 58ch; margin-bottom: 22px; font-size: .95rem; }
     .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 14px; }
     article {
       background: var(--card); border: 1px solid var(--line); border-radius: 2px; padding: 18px;
@@ -58,7 +58,7 @@
     }
     article h2 { font-size: 1rem; font-weight: 500; letter-spacing: .04em; }
     article p { color: var(--mute); font-size: .88rem; flex: 1; }
-    .row { display: flex; gap: 12px; align-items: center; margin-top: 8px; }
+    .row { display: flex; gap: 12px; align-items: center; margin-top: 8px; flex-wrap: wrap; }
     a.buy, button.go {
       background: var(--gold); color: #1a1406; font-weight: 600; text-decoration: none;
       padding: 8px 12px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; border: 0; cursor: pointer;
@@ -76,6 +76,10 @@
     }
     textarea { min-height: 90px; resize: vertical; }
     .split { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .quote {
+      border: 1px solid var(--line); padding: 14px 16px; font-size: .95rem;
+    }
+    .quote strong { color: var(--gold); font-weight: 500; }
     footer { margin-top: 48px; color: var(--mute); font-size: .8rem; border-top: 1px solid var(--line); padding-top: 16px; }
     footer a { color: var(--gold); }
     .note { font-size: .85rem; color: var(--mute); margin-top: 10px; }
@@ -103,11 +107,12 @@
         <p class="brand">Metagora</p>
         <h1>Night Shift Foundry</h1>
       </div>
-      <p class="lede" style="margin:0">File-only builds. Shop the floor, or start one in the workshop.</p>
+      <p class="lede" style="margin:0">File-only desks, sites, and agents. Shop the floor, or start one in the workshop.</p>
     </header>
     <nav role="tablist">
       <button type="button" role="tab" data-tab="shop" aria-selected="true">Shop</button>
       <button type="button" role="tab" data-tab="marketplace" aria-selected="false">Marketplace</button>
+      <button type="button" role="tab" data-tab="agentic" aria-selected="false">Agentic</button>
       <button type="button" role="tab" data-tab="workshop" aria-selected="false">Workshop</button>
       <button type="button" role="tab" data-tab="file" aria-selected="false">File</button>
       <button type="button" role="tab" data-tab="admin" aria-selected="false">Admin</button>
@@ -128,8 +133,13 @@
       </div>
     </section>
 
+    <section id="agentic" class="panel" role="tabpanel">
+      <p class="lede">Agents the foundry built — files you run yourself. Catalog $29–$49. Custom receptionist / intake / after-hours = hours × $75 × complexity after we talk. Dakota approves before a custom build starts.</p>
+      <div class="grid" id="agentic-grid"></div>
+    </section>
+
     <section id="workshop" class="panel" role="tabpanel">
-      <p class="lede">Start a build here. Spec stays public. Name, phone, and email are for the private job file — they are not posted to GitHub.</p>
+      <p class="lede">Start a build here — site, desk, or custom agent. Spec stays public. Name, phone, and email stay in this browser until Stripe; they are not posted to GitHub.</p>
       <form id="workshop-form">
         <div class="split">
           <label>Name <input name="name" required autocomplete="name"></label>
@@ -139,14 +149,25 @@
           <label>Phone <input name="phone" required autocomplete="tel"></label>
           <label>Email <input name="email" type="email" required autocomplete="email"></label>
         </div>
-        <label>What to build <input name="product" required placeholder="Landing page, desk, site…"></label>
+        <label>What to build <input name="product" required placeholder="Landing page, desk, receptionist agent…"></label>
         <label>Who it’s for <input name="audience" required></label>
         <label>Scope <textarea name="scope" required placeholder="Pages, data, integrations, examples…"></textarea></label>
+        <div class="split">
+          <label>Hours <input name="hours" type="number" min="1" max="80" step="0.5" value="4" required></label>
+          <label>Complexity
+            <select name="complexity">
+              <option value="1">1.0 simple</option>
+              <option value="1.5" selected>1.5 medium</option>
+              <option value="2">2.0 hard</option>
+            </select>
+          </label>
+        </div>
+        <p class="quote" id="quote-box">Quote: <strong>$450</strong> <span style="color:var(--mute)">(4 × $75 × 1.5). Dakota approves before Stripe.</span></p>
         <div class="row">
-          <button class="go" type="submit">Start in workshop</button>
+          <button class="go" type="submit">File spec on GitHub</button>
           <a class="ghost" href="https://github.com/Allspecs-yoda/foundry-ledger/issues/new?template=brief.yml">Public spec only</a>
         </div>
-        <p class="note">Quote = hours × $75 × complexity. Build starts after a succeeded Stripe charge. Use the same name, phone, and email at checkout.</p>
+        <p class="note">Quote = hours × $75 × complexity. We talk first. Dakota approves. Then Stripe. Do not send card numbers here.</p>
       </form>
     </section>
 
@@ -193,27 +214,39 @@
   </div>
   <script>
     const BRIEF = "https://github.com/Allspecs-yoda/foundry-ledger/issues/new?template=brief.yml";
-    const PAY = "https://buy.stripe.com/28EaEYaJW9352lk7s1cIE02";
-    const SKUS = [
-      {name:"LIHTC MTSP Rent Desk", blurb:"FY2026 HUD MTSP rents + 2026 QCT/DDA 30% basis boost.", buy:"https://buy.stripe.com/5kQcN65pC7Z1aRQ9A9cIE08", url:"https://github.com/Allspecs-yoda/lihtc-mtsp-rent-desk", price:49},
-      {name:"HCV Payment Standard Desk", blurb:"FY2026 FMR + SAFMR HAP.", buy:"https://buy.stripe.com/00w4gAdW86UXaRQdQpcIE07", url:"https://github.com/Allspecs-yoda/hcv-payment-standard-desk", price:49},
-      {name:"Overtime Floor Desk", blurb:"2026 DOL floors + tip-credit OT cash.", buy:"https://buy.stripe.com/8x2aEYcS4bbde42cMlcIE06", url:"https://github.com/Allspecs-yoda/overtime-floor-desk", price:49},
-      {name:"Economic Nexus Watch Desk", blurb:"Wayfair thresholds + KY 200-txn drop.", buy:"https://buy.stripe.com/aFa9AUf0c1AD4tscMlcIE05", url:"https://github.com/Allspecs-yoda/economic-nexus-watch-desk", price:49},
-      {name:"1099-NEC + SUTA Hire Desk", blurb:"W-2 vs 1099 at the $2,000 NEC line.", buy:"https://buy.stripe.com/14AaEY2dq0wz6BA3bLcIE04", url:"https://github.com/Allspecs-yoda/1099-nec-suta-hire-desk", price:49},
-      {name:"CONUS Per Diem Bid Desk", blurb:"GSA FY2026 per diem quotes.", buy:"https://buy.stripe.com/6oU8wQ05i9357FE27HcIE03", url:"https://github.com/Allspecs-yoda/conus-perdiem-bid-desk", price:49},
-      {name:"Custom Brief Desk", blurb:"You specify. Workshop generates after payment.", buy:PAY, url:BRIEF, sample:"Workshop", price:49},
-      {name:"Scope Creep Loss Desk", blurb:"Change-order loss bench + calculator.", buy:"https://buy.stripe.com/fZu3cw8BOdjlgcaeUtcIE09", url:"https://github.com/Allspecs-yoda/scope-creep-loss-desk", price:49}
-    ];
+    const RATE = 75;
 
-    function card(s, market) {
-      const sample = s.sample === "Workshop"
-        ? `<button class="ghost" type="button" data-open="workshop">Workshop</button>`
-        : `<a class="ghost" href="${s.url}">Sample</a>`;
-      const extra = market ? `<p>Unlimited marketplace copy.</p>` : "";
-      return `<article><h2>${s.name}</h2><p>${s.blurb}</p>${extra}<div class="row"><a class="buy" href="${s.buy}">Buy $${s.price}</a>${sample}<span class="price">$${s.price}</span></div></article>`;
+    function isAgent(o) {
+      const sku = (o.sku || "").toUpperCase();
+      const kind = (o.kind || "").toLowerCase();
+      return kind === "agent" || sku.includes("RECEPTIONIST") || sku.includes("AGENT");
     }
-    document.getElementById("shop-grid").innerHTML = SKUS.map(s => card(s, false)).join("");
-    document.getElementById("market-grid").innerHTML = SKUS.map(s => card(s, true)).join("");
+    function card(s, market) {
+      const price = s.price_usd || s.price || 49;
+      const buy = s.payment_link || s.buy || "";
+      const url = s.url || "#";
+      const name = s.name || "SKU";
+      const blurb = s.blurb || s.claim_issue_title || "File-only pack.";
+      const buyBtn = buy
+        ? `<a class="buy" href="${buy}">Buy $${price}</a>`
+        : `<span class="ghost">No checkout yet</span>`;
+      const sample = `<a class="ghost" href="${url}">Sample</a>`;
+      const extra = market ? `<p>Unlimited marketplace copy.</p>` : "";
+      return `<article><h2>${name}</h2><p>${blurb}</p>${extra}<div class="row">${buyBtn}${sample}<span class="price">$${price}</span></div></article>`;
+    }
+    function paint(offers) {
+      const desks = offers.filter(o => !isAgent(o));
+      const agents = offers.filter(isAgent);
+      document.getElementById("shop-grid").innerHTML = desks.map(s => card(s, false)).join("") || `<p class="lede">No desks listed.</p>`;
+      document.getElementById("market-grid").innerHTML = desks.map(s => card(s, true)).join("");
+      document.getElementById("agentic-grid").innerHTML = agents.map(s => card(s, false)).join("") || `<p class="lede">No agent packs listed yet.</p>`;
+    }
+    fetch("catalog.json", { cache: "no-store" })
+      .then(r => r.ok ? r.json() : Promise.reject())
+      .then(j => paint(j.offers || []))
+      .catch(() => {
+        document.getElementById("shop-grid").innerHTML = `<p class="lede">Catalog unavailable. Use the ledger on GitHub.</p>`;
+      });
 
     function show(id) {
       document.querySelectorAll(".panel").forEach(p => p.classList.toggle("on", p.id === id));
@@ -229,7 +262,7 @@
       if (b) show(b.dataset.open);
     });
     const boot = (location.hash || "#shop").slice(1);
-    if (["shop","marketplace","workshop","file","admin"].includes(boot)) show(boot);
+    if (["shop","marketplace","workshop","file","admin","agentic"].includes(boot)) show(boot);
 
     async function renderKnocks() {
       const tb = document.getElementById("admin-body");
@@ -270,7 +303,7 @@
         tb.innerHTML = `<tr><td colspan="4" style="color:var(--mute)">No local slips yet.</td></tr>`;
         return;
       }
-      tb.innerHTML = all.map(r => `<tr><td>${r.when}</td><td>${r.name}</td><td>${r.product}</td><td>${r.email}<br>${r.phone}</td></tr>`).join("");
+      tb.innerHTML = all.map(r => `<tr><td>${r.when}</td><td>${r.name}</td><td>${r.product}${r.quote ? " · " + r.quote : ""}</td><td>${r.email}<br>${r.phone}</td></tr>`).join("");
     }
     renderFile();
 
@@ -279,6 +312,21 @@
       d.when = new Date().toISOString().slice(0, 16).replace("T", " ");
       return d;
     }
+    function quoteFrom(form) {
+      const hours = parseFloat(form.hours && form.hours.value) || 0;
+      const cx = parseFloat(form.complexity && form.complexity.value) || 1;
+      const usd = Math.round(hours * RATE * cx);
+      return { hours, cx, usd, label: `$${usd} (${hours} × $${RATE} × ${cx})` };
+    }
+    function paintQuote() {
+      const form = document.getElementById("workshop-form");
+      const q = quoteFrom(form);
+      document.getElementById("quote-box").innerHTML =
+        `Quote: <strong>$${q.usd}</strong> <span style="color:var(--mute)">(${q.hours} × $${RATE} × ${q.cx}). Dakota approves before Stripe.</span>`;
+    }
+    document.getElementById("workshop-form").addEventListener("input", paintQuote);
+    paintQuote();
+
     document.getElementById("file-form").addEventListener("submit", e => {
       e.preventDefault();
       saveSlip(collect(e.target));
@@ -286,9 +334,10 @@
     document.getElementById("workshop-form").addEventListener("submit", e => {
       e.preventDefault();
       const d = collect(e.target);
+      const q = quoteFrom(e.target);
+      d.quote = q.label;
       saveSlip(d);
       show("file");
-      window.open(PAY, "_blank", "noopener");
       window.open(BRIEF, "_blank", "noopener");
     });
   </script>
