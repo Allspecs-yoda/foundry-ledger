@@ -3,128 +3,258 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Night Shift Foundry — shop</title>
+  <title>METAGORA</title>
   <style>
-    :root { --bg:#0f1419; --card:#1a222c; --ink:#e8eef4; --muted:#9aa8b5; --accent:#e6b84d; --line:#2a3542; }
-    * { box-sizing: border-box; }
-    body { margin:0; font:16px/1.45 system-ui, sans-serif; background:var(--bg); color:var(--ink); }
-    header, footer, main { max-width: 980px; margin:0 auto; padding: 24px 20px; }
-    header h1 { margin:0 0 6px; font-size: 1.6rem; }
-    header p { margin:0; color:var(--muted); }
-    .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap:16px; }
-    article { background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden; display:flex; flex-direction:column; }
-    article svg, article img { width:100%; height:auto; display:block; background:#0b0f14; }
-    article h2 { font-size:1.05rem; margin:12px 16px 4px; }
-    article p { margin:0 16px 12px; color:var(--muted); font-size:.92rem; }
-    .row { display:flex; gap:8px; padding:0 16px 16px; align-items:center; }
-    a.buy { background:var(--accent); color:#1a1406; font-weight:700; text-decoration:none; padding:8px 12px; border-radius:8px; }
-    a.preview { color:var(--accent); }
-    .price { margin-left:auto; font-weight:700; }
-    footer { border-top:1px solid var(--line); color:var(--muted); font-size:.85rem; }
-    footer a { color:var(--accent); }
-    .note { font-size:.85rem; color:var(--muted); margin: 8px 0 20px; }
+    :root {
+      --bg: #07090c;
+      --ink: #f4f1ea;
+      --mute: #8b93a0;
+      --line: rgba(244,241,234,.14);
+      --gold: #d9c4a0;
+      --card: rgba(244,241,234,.03);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { min-height: 100%; }
+    body {
+      font: 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      letter-spacing: .02em;
+    }
+    .field {
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background:
+        radial-gradient(900px 500px at 18% 8%, rgba(217,196,160,.08), transparent 55%),
+        radial-gradient(700px 480px at 82% 92%, rgba(90,120,160,.07), transparent 50%),
+        var(--bg);
+      animation: drift 28s ease-in-out infinite alternate;
+    }
+    .field::before {
+      content: "";
+      position: absolute; inset: -20%;
+      background: repeating-linear-gradient(115deg, transparent 0 46px, rgba(244,241,234,.018) 46px 47px);
+      animation: pan 40s linear infinite;
+    }
+    .shell { position: relative; z-index: 1; max-width: 1080px; margin: 0 auto; padding: 28px 20px 80px; }
+    header { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 28px; }
+    .brand { letter-spacing: .42em; font-size: 12px; color: var(--gold); text-transform: uppercase; }
+    h1 { font-weight: 500; letter-spacing: .22em; font-size: 1.15rem; }
+    nav {
+      display: flex; gap: 0; border-bottom: 1px solid var(--line); margin-bottom: 28px;
+    }
+    nav button {
+      appearance: none; background: none; border: 0; color: var(--mute);
+      padding: 12px 18px; letter-spacing: .18em; text-transform: uppercase; font-size: 11px;
+      cursor: pointer; border-bottom: 1px solid transparent; margin-bottom: -1px;
+    }
+    nav button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--gold); }
+    .panel { display: none; animation: fade .6s ease; }
+    .panel.on { display: block; }
+    .lede { color: var(--mute); max-width: 52ch; margin-bottom: 22px; font-size: .95rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 14px; }
+    article {
+      background: var(--card); border: 1px solid var(--line); border-radius: 2px; padding: 18px;
+      display: flex; flex-direction: column; gap: 8px; min-height: 180px;
+    }
+    article h2 { font-size: 1rem; font-weight: 500; letter-spacing: .04em; }
+    article p { color: var(--mute); font-size: .88rem; flex: 1; }
+    .row { display: flex; gap: 12px; align-items: center; margin-top: 8px; }
+    a.buy, button.go {
+      background: var(--gold); color: #1a1406; font-weight: 600; text-decoration: none;
+      padding: 8px 12px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; border: 0; cursor: pointer;
+    }
+    a.ghost, button.ghost {
+      color: var(--gold); background: none; border: 0; text-decoration: none; font-size: 12px;
+      letter-spacing: .08em; text-transform: uppercase; cursor: pointer;
+    }
+    .price { margin-left: auto; color: var(--ink); font-size: 13px; }
+    form { display: grid; gap: 14px; max-width: 560px; }
+    label { display: grid; gap: 6px; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--mute); }
+    input, textarea, select {
+      background: transparent; border: 0; border-bottom: 1px solid var(--line); color: var(--ink);
+      padding: 8px 0; font: inherit; letter-spacing: .02em;
+    }
+    textarea { min-height: 90px; resize: vertical; }
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    footer { margin-top: 48px; color: var(--mute); font-size: .8rem; border-top: 1px solid var(--line); padding-top: 16px; }
+    footer a { color: var(--gold); }
+    .note { font-size: .85rem; color: var(--mute); margin-top: 10px; }
+    table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+    th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { color: var(--mute); font-weight: 500; letter-spacing: .14em; text-transform: uppercase; font-size: 10px; }
+    @keyframes drift { to { filter: hue-rotate(18deg); } }
+    @keyframes pan { to { transform: translate3d(-8%, 4%, 0); } }
+    @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+    @media (max-width: 640px) {
+      .split { grid-template-columns: 1fr; }
+      header { flex-direction: column; }
+      nav button { padding: 12px 10px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .field, .field::before, .panel { animation: none; }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Night Shift Foundry</h1>
-    <p>File-only desks for people who already do the work. Preview here. Full pack after Stripe checkout.</p>
-    <p class="note">Public pages are sample + watermarked screen only — not the build. Pay with card + billing details + TOS. Enter your GitHub handle; the clerk invites that handle to the private pack. Custom work: open a <a href="https://github.com/Allspecs-yoda/foundry-ledger/issues/new?template=brief.yml">BRIEF issue</a>, pay, get that spec.</p>
-  </header>
-  <main class="grid" id="grid">
-    <!-- cards injected as static HTML so the shop works without JS -->
-    <article>
-      <img src="../previews/lihtc-mtsp.svg" alt="Watermarked preview of LIHTC MTSP Rent Desk">
-      <h2>LIHTC MTSP Rent Desk</h2>
-      <p>FY2026 HUD MTSP → 50/60% max rents. Preview is 8 counties; full pack is 4,764 rows.</p>
-      <div class="row">
-        <a class="buy" href="https://buy.stripe.com/5kQcN65pC7Z1aRQ9A9cIE08">Buy $49</a>
-        <a class="preview" href="https://github.com/Allspecs-yoda/lihtc-mtsp-rent-desk">Sample</a>
-        <span class="price">$49</span>
+  <div class="field" aria-hidden="true"></div>
+  <div class="shell">
+    <header>
+      <div>
+        <p class="brand">Metagora</p>
+        <h1>Night Shift Foundry</h1>
       </div>
-    </article>
-    <article>
-      <img src="../previews/hcv-ps.svg" alt="Watermarked preview of HCV Payment Standard Desk">
-      <h2>HCV Payment Standard Desk</h2>
-      <p>FY2026 FMR + SAFMR HAP. Preview is a handful of ZIPs; full pack is the county + ZIP benches.</p>
-      <div class="row">
-        <a class="buy" href="https://buy.stripe.com/00w4gAdW86UXaRQdQpcIE07">Buy $49</a>
-        <a class="preview" href="https://github.com/Allspecs-yoda/hcv-payment-standard-desk">Sample</a>
-        <span class="price">$49</span>
-      </div>
-    </article>
-    <article>
-      <img src="../previews/ot-floor.svg" alt="Watermarked preview of Overtime Floor Desk">
-      <h2>Overtime Floor Desk</h2>
-      <p>2026 DOL floors + tip-credit OT cash. Preview runs 3 states; full pack is 51 + NY hospitality.</p>
-      <div class="row">
-        <a class="buy" href="https://buy.stripe.com/8x2aEYcS4bbde42cMlcIE06">Buy $49</a>
-        <a class="preview" href="https://github.com/Allspecs-yoda/overtime-floor-desk">Sample</a>
-        <span class="price">$49</span>
-      </div>
-    </article>
-    <article>
-      <img src="../previews/nexus.svg" alt="Watermarked preview of Economic Nexus Watch Desk">
-      <h2>Economic Nexus Watch Desk</h2>
-      <p>Wayfair thresholds + KY 200-txn drop. Preview is 6 states; full pack is 51 + SSTGB.</p>
-      <div class="row">
-        <a class="buy" href="https://buy.stripe.com/aFa9AUf0c1AD4tscMlcIE05">Buy $49</a>
-        <a class="preview" href="https://github.com/Allspecs-yoda/economic-nexus-watch-desk">Sample</a>
-        <span class="price">$49</span>
-      </div>
-    </article>
-    <article>
-      <img src="../previews/nec-suta.svg" alt="Watermarked preview of 1099-NEC + SUTA Hire Desk">
-      <h2>1099-NEC + SUTA Hire Desk</h2>
-      <p>W-2 vs 1099 at the $2,000 NEC line. Preview is TX/WA/IA; full pack is 57 SUTA bases.</p>
-      <div class="row">
-        <a class="buy" href="https://buy.stripe.com/14AaEY2dq0wz6BA3bLcIE04">Buy $49</a>
-        <a class="preview" href="https://github.com/Allspecs-yoda/1099-nec-suta-hire-desk">Sample</a>
-        <span class="price">$49</span>
-      </div>
-    </article>
-    <article>
-      <img src="../previews/perdiem.svg" alt="Watermarked preview of CONUS Per Diem Bid Desk">
-      <h2>CONUS Per Diem Bid Desk</h2>
-      <p>GSA FY2026 per diem quotes. Preview is 4 localities; full pack is the master file.</p>
-      <div class="row">
-        <a class="buy" href="https://buy.stripe.com/6oU8wQ05i9357FE27HcIE03">Buy $49</a>
-        <a class="preview" href="https://github.com/Allspecs-yoda/conus-perdiem-bid-desk">Sample</a>
-        <span class="price">$49</span>
-      </div>
-    </article>
-    <article>
-      <img src="../previews/brief.svg" alt="Watermarked preview of Custom Brief Desk">
-      <h2>Custom Brief Desk</h2>
-      <p>You specify the pack. We generate those files after payment — not a public dump of the generator.</p>
-      <div class="row">
-        <a class="buy" href="https://buy.stripe.com/28EaEYaJW9352lk7s1cIE02">Buy $49</a>
-        <a class="preview" href="https://github.com/Allspecs-yoda/foundry-ledger/issues/new?template=brief.yml">File a BRIEF</a>
-        <span class="price">$49</span>
-      </div>
-    </article>
-    <article>
-      <img src="../previews/scope.svg" alt="Watermarked preview of Scope Creep Loss Desk">
-      <h2>Scope Creep Loss Desk</h2>
-      <p>Change-order loss bench. Preview is 4 archetypes; full pack is the industry CSV + calculator.</p>
-      <div class="row">
-        <a class="buy" href="https://buy.stripe.com/fZu3cw8BOdjlgcaeUtcIE09">Buy $49</a>
-        <a class="preview" href="https://github.com/Allspecs-yoda/scope-creep-loss-desk">Sample</a>
-        <span class="price">$49</span>
-      </div>
-    </article>
-  </main>
-  <footer>
-    <p>
-      <a href="https://github.com/Allspecs-yoda/foundry-ledger/blob/main/TERMS.md">Terms of Service</a>
-      ·
-      <a href="https://github.com/Allspecs-yoda/foundry-ledger/blob/main/PRIVACY.md">Privacy Policy</a>
-      ·
-      <a href="https://github.com/Allspecs-yoda/foundry-ledger">Ledger</a>
-      ·
-      Watch this repo for new SKUs (no email list).
-    </p>
-    <p>Checkout collects payment details, billing address, phone, and your GitHub handle, and requires TOS acceptance. Not tax, legal, or payroll advice. Seller: Dakota / Night Shift Foundry.</p>
-  </footer>
+      <p class="lede" style="margin:0">File-only builds. Shop the floor, or start one in the workshop.</p>
+    </header>
+    <nav role="tablist">
+      <button type="button" role="tab" data-tab="shop" aria-selected="true">Shop</button>
+      <button type="button" role="tab" data-tab="marketplace" aria-selected="false">Marketplace</button>
+      <button type="button" role="tab" data-tab="workshop" aria-selected="false">Workshop</button>
+      <button type="button" role="tab" data-tab="file" aria-selected="false">File</button>
+    </nav>
+
+    <section id="shop" class="panel on" role="tabpanel">
+      <p class="lede">Ready desks. Pay on Stripe. Full unwatermarked files after checkout. Preview is not the pack.</p>
+      <div class="grid" id="shop-grid"></div>
+    </section>
+
+    <section id="marketplace" class="panel" role="tabpanel">
+      <p class="lede">The same packages stay on the floor for unlimited later sales. Buyer may edit and resell their copy. Foundry keeps this marketplace copy.</p>
+      <div class="grid" id="market-grid"></div>
+    </section>
+
+    <section id="workshop" class="panel" role="tabpanel">
+      <p class="lede">Start a build here. Spec stays public. Name, phone, and email are for the private job file — they are not posted to GitHub.</p>
+      <form id="workshop-form">
+        <div class="split">
+          <label>Name <input name="name" required autocomplete="name"></label>
+          <label>GitHub <input name="github" required placeholder="handle"></label>
+        </div>
+        <div class="split">
+          <label>Phone <input name="phone" required autocomplete="tel"></label>
+          <label>Email <input name="email" type="email" required autocomplete="email"></label>
+        </div>
+        <label>What to build <input name="product" required placeholder="Landing page, desk, site…"></label>
+        <label>Who it’s for <input name="audience" required></label>
+        <label>Scope <textarea name="scope" required placeholder="Pages, data, integrations, examples…"></textarea></label>
+        <div class="row">
+          <button class="go" type="submit">Start in workshop</button>
+          <a class="ghost" href="https://github.com/Allspecs-yoda/foundry-ledger/issues/new?template=brief.yml">Public spec only</a>
+        </div>
+        <p class="note">Quote = hours × $75 × complexity. Build starts after a succeeded Stripe charge. Use the same name, phone, and email at checkout.</p>
+      </form>
+    </section>
+
+    <section id="file" class="panel" role="tabpanel">
+      <p class="lede">What, for whom. This browser keeps a local slip. Night Shift files the official row privately from Stripe when the build starts — never on the public ledger.</p>
+      <form id="file-form">
+        <div class="split">
+          <label>Name <input name="name" required></label>
+          <label>GitHub <input name="github"></label>
+        </div>
+        <div class="split">
+          <label>Phone <input name="phone" required></label>
+          <label>Email <input name="email" type="email" required></label>
+        </div>
+        <label>Build <input name="product" required></label>
+        <button class="go" type="submit">Keep local slip</button>
+      </form>
+      <table style="margin-top:28px">
+        <thead><tr><th>When</th><th>Name</th><th>Build</th><th>Contact</th></tr></thead>
+        <tbody id="file-body"><tr><td colspan="4" style="color:var(--mute)">No local slips yet.</td></tr></tbody>
+      </table>
+    </section>
+
+    <footer>
+      <p>
+        <a href="https://github.com/Allspecs-yoda/foundry-ledger/blob/main/TERMS.md">Terms</a>
+        ·
+        <a href="https://github.com/Allspecs-yoda/foundry-ledger/blob/main/PRIVACY.md">Privacy</a>
+        ·
+        <a href="https://github.com/Allspecs-yoda/foundry-ledger">Ledger</a>
+        ·
+        <a href="metagora.html">Card</a>
+      </p>
+      <p>Seller: Dakota / Night Shift Foundry. No email list. Watch the ledger for new SKUs.</p>
+    </footer>
+  </div>
+  <script>
+    const BRIEF = "https://github.com/Allspecs-yoda/foundry-ledger/issues/new?template=brief.yml";
+    const PAY = "https://buy.stripe.com/28EaEYaJW9352lk7s1cIE02";
+    const SKUS = [
+      {name:"LIHTC MTSP Rent Desk", blurb:"FY2026 HUD MTSP → 50/60% max rents.", buy:"https://buy.stripe.com/5kQcN65pC7Z1aRQ9A9cIE08", url:"https://github.com/Allspecs-yoda/lihtc-mtsp-rent-desk", price:49},
+      {name:"HCV Payment Standard Desk", blurb:"FY2026 FMR + SAFMR HAP.", buy:"https://buy.stripe.com/00w4gAdW86UXaRQdQpcIE07", url:"https://github.com/Allspecs-yoda/hcv-payment-standard-desk", price:49},
+      {name:"Overtime Floor Desk", blurb:"2026 DOL floors + tip-credit OT cash.", buy:"https://buy.stripe.com/8x2aEYcS4bbde42cMlcIE06", url:"https://github.com/Allspecs-yoda/overtime-floor-desk", price:49},
+      {name:"Economic Nexus Watch Desk", blurb:"Wayfair thresholds + KY 200-txn drop.", buy:"https://buy.stripe.com/aFa9AUf0c1AD4tscMlcIE05", url:"https://github.com/Allspecs-yoda/economic-nexus-watch-desk", price:49},
+      {name:"1099-NEC + SUTA Hire Desk", blurb:"W-2 vs 1099 at the $2,000 NEC line.", buy:"https://buy.stripe.com/14AaEY2dq0wz6BA3bLcIE04", url:"https://github.com/Allspecs-yoda/1099-nec-suta-hire-desk", price:49},
+      {name:"CONUS Per Diem Bid Desk", blurb:"GSA FY2026 per diem quotes.", buy:"https://buy.stripe.com/6oU8wQ05i9357FE27HcIE03", url:"https://github.com/Allspecs-yoda/conus-perdiem-bid-desk", price:49},
+      {name:"Custom Brief Desk", blurb:"You specify. Workshop generates after payment.", buy:PAY, url:BRIEF, sample:"Workshop", price:49},
+      {name:"Scope Creep Loss Desk", blurb:"Change-order loss bench + calculator.", buy:"https://buy.stripe.com/fZu3cw8BOdjlgcaeUtcIE09", url:"https://github.com/Allspecs-yoda/scope-creep-loss-desk", price:49}
+    ];
+
+    function card(s, market) {
+      const sample = s.sample === "Workshop"
+        ? `<button class="ghost" type="button" data-open="workshop">Workshop</button>`
+        : `<a class="ghost" href="${s.url}">Sample</a>`;
+      const extra = market ? `<p>Unlimited marketplace copy.</p>` : "";
+      return `<article><h2>${s.name}</h2><p>${s.blurb}</p>${extra}<div class="row"><a class="buy" href="${s.buy}">Buy $${s.price}</a>${sample}<span class="price">$${s.price}</span></div></article>`;
+    }
+    document.getElementById("shop-grid").innerHTML = SKUS.map(s => card(s, false)).join("");
+    document.getElementById("market-grid").innerHTML = SKUS.map(s => card(s, true)).join("");
+
+    function show(id) {
+      document.querySelectorAll(".panel").forEach(p => p.classList.toggle("on", p.id === id));
+      document.querySelectorAll("nav [role=tab]").forEach(b => b.setAttribute("aria-selected", b.dataset.tab === id));
+      history.replaceState(null, "", "#" + id);
+    }
+    document.querySelector("nav").addEventListener("click", e => {
+      const b = e.target.closest("[data-tab]");
+      if (b) show(b.dataset.tab);
+    });
+    document.body.addEventListener("click", e => {
+      const b = e.target.closest("[data-open]");
+      if (b) show(b.dataset.open);
+    });
+    const boot = (location.hash || "#shop").slice(1);
+    if (["shop","marketplace","workshop","file"].includes(boot)) show(boot);
+
+    const KEY = "metagora-file";
+    function slips() {
+      try { return JSON.parse(localStorage.getItem(KEY) || "[]"); } catch { return []; }
+    }
+    function saveSlip(row) {
+      const all = slips();
+      all.unshift(row);
+      localStorage.setItem(KEY, JSON.stringify(all.slice(0, 20)));
+      renderFile();
+    }
+    function renderFile() {
+      const all = slips();
+      const tb = document.getElementById("file-body");
+      if (!all.length) {
+        tb.innerHTML = `<tr><td colspan="4" style="color:var(--mute)">No local slips yet.</td></tr>`;
+        return;
+      }
+      tb.innerHTML = all.map(r => `<tr><td>${r.when}</td><td>${r.name}</td><td>${r.product}</td><td>${r.email}<br>${r.phone}</td></tr>`).join("");
+    }
+    renderFile();
+
+    function collect(form) {
+      const d = Object.fromEntries(new FormData(form).entries());
+      d.when = new Date().toISOString().slice(0, 16).replace("T", " ");
+      return d;
+    }
+    document.getElementById("file-form").addEventListener("submit", e => {
+      e.preventDefault();
+      saveSlip(collect(e.target));
+    });
+    document.getElementById("workshop-form").addEventListener("submit", e => {
+      e.preventDefault();
+      const d = collect(e.target);
+      saveSlip(d);
+      show("file");
+      window.open(PAY, "_blank", "noopener");
+      window.open(BRIEF, "_blank", "noopener");
+    });
+  </script>
 </body>
 </html>
