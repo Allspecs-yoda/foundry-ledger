@@ -42,4 +42,4 @@ Do not email. Watch this repo.
 
 ## METAGORA
 
-Digital calling card for estimator outreach: [METAGORA.md](METAGORA.md). If someone declines a build, leave this card and do not follow up.
+Calling card: [metagora.html](https://allspecs-yoda.github.io/foundry-ledger/metagora.html) — site + start-a-build only. Leave it with every contacted customer. A BRIEF issue reaches the estimator agent.
