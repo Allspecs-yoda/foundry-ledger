@@ -25,3 +25,4 @@ Never invent sales. A zero-sales cycle still gets a row.
 | 2026-08-27 | stripe | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | zero-sales; charges listed=0 (foundry products live; LIHTC-MTSP plink now live; no succeeded charges) |
 | 2026-08-28 | stripe | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | zero-sales; charges listed=0 (foundry products live; LIHTC 1.42-10 polish; Stripe balance -$97.92; no succeeded charges) |
 | 2026-08-28 | stripe | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | zero-sales; charges listed=0 (foundry products live; LIHTC QCT/DDA boost polish; Stripe balance -$97.92; no succeeded charges) |
+| 2026-08-28 | stripe | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | zero-sales; charges listed=0 (receptionist agent pack listed; no succeeded charges) |
