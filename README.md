@@ -39,3 +39,7 @@ Pay on Stripe (card + billing address + TOS). Enter your GitHub handle. After a 
 Custom request: open a [BRIEF issue](https://github.com/Allspecs-yoda/foundry-ledger/issues/new?template=brief.yml), pay Custom Brief Desk, get that spec.
 
 Do not email. Watch this repo.
+
+## METAGORA
+
+Digital calling card for estimator outreach: [METAGORA.md](METAGORA.md). If someone declines a build, leave this card and do not follow up.
