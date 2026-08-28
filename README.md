@@ -27,11 +27,12 @@ STRIPE_SECRET_KEY=sk_live_... python3 allocate.py --stripe --capital CAPITAL.md
 
 If Night Shift Foundry cannot start: keep selling via existing Payment Links, run `allocate.py` locally, and follow `RUNBOOK.md` to publish a file-only pack by hand.
 
-## Shop (preview only)
+## Shop (GUI)
 
-Watermarked screens of what each desk does — not the files:
+Live: [allspecs-yoda.github.io/foundry-ledger](https://allspecs-yoda.github.io/foundry-ledger/)
 
-- Storefront: [docs/index.html](docs/index.html)
+Tabs: **Shop** (ready desks) · **Marketplace** (unlimited copies) · **Workshop** (start a custom build) · **File** (what / for whom — local slip; official contacts stay private)
+
 - [Terms of Service](TERMS.md) · [Privacy Policy](PRIVACY.md)
 
 Pay on Stripe (card + billing address + TOS). Enter your GitHub handle. After a real charge, the clerk invites that handle to the **private** pack. Public product repos stay as Dakota left them.
@@ -42,4 +43,4 @@ Do not email. Watch this repo.
 
 ## METAGORA
 
-Calling card: [metagora.html](https://allspecs-yoda.github.io/foundry-ledger/metagora.html) — site + start-a-build only. Leave it with every contacted customer. A BRIEF issue reaches the estimator agent.
+Calling card: [metagora.html](https://allspecs-yoda.github.io/foundry-ledger/metagora.html) — site + workshop only. Leave it with every contacted customer.
