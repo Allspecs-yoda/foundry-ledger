@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-28T02:00:00Z",
+  "updated": "2026-08-28T02:30:00Z",
   "vendor": "Night Shift Foundry",
   "notify": "Watch this GitHub repo. No email list.",
   "offers": [
@@ -113,6 +113,21 @@
       "url": "https://github.com/Allspecs-yoda/scope-creep-loss-desk",
       "payment_link": "https://buy.stripe.com/fZu3cw8BOdjlgcaeUtcIE09",
       "claim_issue_title": "CLAIM: Scope Creep Loss Desk"
+    },
+    {
+      "sku": "NSF-20260828-RECEPTIONIST",
+      "name": "Front Desk Receptionist Agent Pack",
+      "price_usd": 49,
+      "currency": "USD",
+      "kind": "agent",
+      "exclusive": false,
+      "inventory": "unlimited",
+      "resale": "buyer-may-resell-copies",
+      "delivery": "public-github-zip",
+      "url": "https://github.com/Allspecs-yoda/receptionist-agent-pack",
+      "payment_link": "https://buy.stripe.com/3cIaEYcS49358JIh2BcIE0a",
+      "claim_issue_title": "CLAIM: Front Desk Receptionist Agent Pack",
+      "blurb": "Files-only front desk: hours, routing, refuse-illegal, human handoff."
     }
   ]
 }
