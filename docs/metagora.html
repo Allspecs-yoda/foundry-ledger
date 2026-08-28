@@ -13,12 +13,11 @@
       --gold: #d9c4a0;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; }
+    html, body { min-height: 100%; }
     body {
       font: 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
       background: var(--bg);
       color: var(--ink);
-      overflow: hidden;
       letter-spacing: .02em;
     }
     .field {
@@ -83,8 +82,15 @@
       font-weight: 500;
       font-size: clamp(2.2rem, 6vw, 3.1rem);
       letter-spacing: .28em;
-      margin-bottom: 40px;
+      margin-bottom: 18px;
       animation: fade 1.6s ease .1s both;
+    }
+    .does {
+      color: var(--mute);
+      font-size: .92rem;
+      line-height: 1.55;
+      margin-bottom: 28px;
+      animation: fade 1.7s ease .12s both;
     }
     ul {
       list-style: none;
@@ -135,6 +141,7 @@
     <div class="inner">
       <p class="mark">calling card</p>
       <h1>METAGORA</h1>
+      <p class="does">Night Shift Foundry builds file-only websites and coding packs. Shop a ready desk, or start a custom build in the workshop. Pay first. You get unwatermarked files you can edit and resell.</p>
       <ul>
         <li>
           <span class="k">Site</span>
