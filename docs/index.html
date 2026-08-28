@@ -110,6 +110,7 @@
       <button type="button" role="tab" data-tab="marketplace" aria-selected="false">Marketplace</button>
       <button type="button" role="tab" data-tab="workshop" aria-selected="false">Workshop</button>
       <button type="button" role="tab" data-tab="file" aria-selected="false">File</button>
+      <button type="button" role="tab" data-tab="admin" aria-selected="false">Admin</button>
     </nav>
 
     <section id="shop" class="panel on" role="tabpanel">
@@ -164,6 +165,14 @@
       </table>
     </section>
 
+    <section id="admin" class="panel" role="tabpanel">
+      <p class="lede">Knock log for Dakota. Public posts we actually commented on — no phone or email here. Official PII stays in the private job file after a paid start.</p>
+      <table>
+        <thead><tr><th>When</th><th>Who</th><th>Door</th><th>Status</th><th>Ask</th></tr></thead>
+        <tbody id="admin-body"><tr><td colspan="5" style="color:var(--mute)">Loading knocks…</td></tr></tbody>
+      </table>
+    </section>
+
     <footer>
       <p>
         <a href="https://github.com/Allspecs-yoda/foundry-ledger/blob/main/TERMS.md">Terms</a>
@@ -215,7 +224,29 @@
       if (b) show(b.dataset.open);
     });
     const boot = (location.hash || "#shop").slice(1);
-    if (["shop","marketplace","workshop","file"].includes(boot)) show(boot);
+    if (["shop","marketplace","workshop","file","admin"].includes(boot)) show(boot);
+
+    async function renderKnocks() {
+      const tb = document.getElementById("admin-body");
+      try {
+        const r = await fetch("knocks.json", { cache: "no-store" });
+        const rows = await r.json();
+        if (!rows.length) {
+          tb.innerHTML = `<tr><td colspan="5" style="color:var(--mute)">No knocks yet.</td></tr>`;
+          return;
+        }
+        tb.innerHTML = rows.map(k => `<tr>
+          <td>${k.touched_at || ""}</td>
+          <td>${k.key || ""}</td>
+          <td>${k.channel || ""}</td>
+          <td>${k.status || ""}</td>
+          <td>${k.where ? `<a href="${k.where}">${k.ask || k.where}</a>` : (k.ask || "")}</td>
+        </tr>`).join("");
+      } catch {
+        tb.innerHTML = `<tr><td colspan="5" style="color:var(--mute)">Knock log unavailable.</td></tr>`;
+      }
+    }
+    renderKnocks();
 
     const KEY = "metagora-file";
     function slips() {
