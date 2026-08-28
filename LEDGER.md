@@ -20,3 +20,4 @@ Append only. Never edit old rows.
 | 2026-08-27 | NSF-20260827-HCV-PS | https://github.com/Allspecs-yoda/hcv-payment-standard-desk | $49 USD | list | Hunt polish (<3h): 982.505 HAP = min(PS−TTP, gross−TTP) + (c)(1) voucher vs unit size + (c)(3) two-year hold; no clone SKU |
 | 2026-08-27 | NSF-20260827-LIHTC-MTSP | https://github.com/Allspecs-yoda/lihtc-mtsp-rent-desk | $49 USD | list | Public LIHTC/HERA demand; 4764-row FY2026 MTSP + 42(g)(2) rents; unlimited non-exclusive |
 | 2026-08-28 | NSF-20260827-LIHTC-MTSP | https://github.com/Allspecs-yoda/lihtc-mtsp-rent-desk | $49 USD | list | Hunt polish (<3h): 42(g)(2)(A) --floor-il hold-harmless + 26 CFR 1.42-10 UA ladder; no clone SKU |
+| 2026-08-28 | NSF-20260827-LIHTC-MTSP | https://github.com/Allspecs-yoda/lihtc-mtsp-rent-desk | $49 USD | list | Hunt polish (<3h): IRC 42(d)(5)(B) 30% basis boost — 14496 HUD 2026 QCTs + 2615 metro DDA ZCTAs + 301 nonmetro DDAs; no clone SKU |
